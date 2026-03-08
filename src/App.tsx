@@ -5,16 +5,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import Auth from "./pages/Auth";
-import Cabinet from "./pages/Cabinet";
-import FullResult from "./pages/FullResult";
-import Compatibility from "./pages/Compatibility";
-import ChildAnalysis from "./pages/ChildAnalysis";
-import Balance from "./pages/Balance";
-import Admin from "./pages/Admin";
-import FamilyMatrix from "./pages/FamilyMatrix";
-import DestinyMap from "./pages/DestinyMap";
-import Catalog from "./pages/Catalog";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,16 +17,6 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/auth" element={<Auth />} />
-          <Route path="/cabinet" element={<Cabinet />} />
-          <Route path="/result" element={<FullResult />} />
-          <Route path="/compatibility" element={<Compatibility />} />
-          <Route path="/child" element={<ChildAnalysis />} />
-          <Route path="/balance" element={<Balance />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/family" element={<FamilyMatrix />} />
-          <Route path="/destiny" element={<DestinyMap />} />
-          <Route path="/catalog" element={<Catalog />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

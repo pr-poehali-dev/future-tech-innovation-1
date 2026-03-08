@@ -6,7 +6,7 @@ export default {
 		"./pages/**/*.{ts,tsx}",
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}"
+		"./src/**/*.{ts,tsx}",
 	],
 	prefix: "",
 	theme: {
@@ -14,12 +14,12 @@ export default {
 			center: true,
 			padding: '2rem',
 			screens: {
-				'2xl': '1200px'
+				'2xl': '1400px'
 			}
 		},
 		extend: {
 			fontFamily: {
-				golos: ['Golos Text', 'sans-serif'],
+				sans: ['Montserrat', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -64,23 +64,6 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				},
-				lavender: {
-					light: '#E8E4F5',
-					DEFAULT: '#8B7EC8',
-					soft: '#F4F2FA',
-				},
-				violet: {
-					deep: '#6C5BA7',
-					text: '#4A3D7A',
-				},
-				rose: {
-					soft: '#F9F0F4',
-					muted: '#D4A0B9',
-				},
-				beige: {
-					DEFAULT: '#F5F0EB',
-					warm: '#EDE5DA',
 				}
 			},
 			borderRadius: {
@@ -90,22 +73,25 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: { height: '0' },
-					to: { height: 'var(--radix-accordion-content-height)' }
+					from: {
+						height: '0'
+					},
+					to: {
+						height: 'var(--radix-accordion-content-height)'
+					}
 				},
 				'accordion-up': {
-					from: { height: 'var(--radix-accordion-content-height)' },
-					to: { height: '0' }
-				},
-				'fade-in': {
-					from: { opacity: '0', transform: 'translateY(16px)' },
-					to: { opacity: '1', transform: 'translateY(0)' }
-				},
+					from: {
+						height: 'var(--radix-accordion-content-height)'
+					},
+					to: {
+						height: '0'
+					}
+				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.6s ease-out forwards',
+				'accordion-up': 'accordion-up 0.2s ease-out'
 			}
 		}
 	},
